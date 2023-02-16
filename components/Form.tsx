@@ -7,7 +7,7 @@ const Form = () => {
 
             <form className="bg-white h-fit pb-6 p-4 justify-center my-4flex flex-col w-fit z-2">
                 <h1 className="text-3xl font-semibold">Pickup Request</h1>
-                <div className="flex">
+                <div className="flex gap-2">
                     <FormInput label="Firstname" type="text" placeholder="Olaoluwa" onChange={() => { console.log("First") }} />
                     <FormInput label="Lastname" type="text" placeholder="Pogan" onChange={() => { console.log("Last") }} />
                 </div>
@@ -37,7 +37,7 @@ type FormInput = {
 export const FormInput = (props: FormInput) => {
     const { label, ...rest } = props
     return (
-        <div className="flex flex-col gap-2 w-fix pb-2 ">
+        <div className="flex flex-col gap-2 w-fix pb-2  ">
             <label className="font-md font-semibold"> {label}</label>
             <input className="w-full bg-gray-100 p-2 outline-none rounded-md focus:outline-green-200" {...rest} />
         </div>
