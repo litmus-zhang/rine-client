@@ -1,3 +1,5 @@
+import Button from "./Button"
+
 const Form = () => {
 
     return (
@@ -13,6 +15,9 @@ const Form = () => {
                 <FormInput label="Email" type="email" placeholder="Olaoluwap@gmail.com" onChange={() => { console.log("First") }} />
                 <FormInput label="Address" type="text" placeholder="Plot 2, Ajao Estate" onChange={() => { console.log("First") }} />
                 <FormInput label="Preferred Date of Pickup" type="date" placeholder="Olaoluwa" onChange={() => { console.log("First") }} />
+                <Button
+                text="Submit Request"
+                />
 
             </form>
 
@@ -32,7 +37,7 @@ type FormInput = {
 export const FormInput = (props: FormInput) => {
     const { label, ...rest } = props
     return (
-        <div className="flex flex-col gap-2 w-fix p-2">
+        <div className="flex flex-col gap-2 w-fix pb-2 ">
             <label className="font-md font-semibold"> {label}</label>
             <input className="w-full bg-gray-100 p-2 outline-none rounded-md focus:outline-green-200" {...rest} />
         </div>
